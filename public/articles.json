@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Mengenal React.js: Dasar dan Konsep",
+    "content": "React.js adalah library JavaScript untuk membangun UI...",
+    "date": "2025-02-28"
+  },
+  {
+    "id": 2,
+    "title": "Cara Menggunakan useState di React",
+    "content": "Hook useState digunakan untuk manajemen state dalam komponen...",
+    "date": "2025-02-27"
+  }
+]
