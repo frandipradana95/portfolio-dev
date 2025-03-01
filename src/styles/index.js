@@ -4,7 +4,7 @@ export * from "./NavbarStyle";
 export * from "./HomeStyle";
 export * from "./ContactStyle";
 export * from "./ProjectStyle";
-export * from "./BlogStyle";
+export * from "./PopupStyle";
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -24,6 +24,8 @@ export const GlobalStyle = createGlobalStyle`
         user-select: none; /* Standard syntax */
      
     }
+
+	
     
 `;
 

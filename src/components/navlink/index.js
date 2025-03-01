@@ -15,9 +15,6 @@ export const NavlinkMobile = ({ isOpen, setIsOpen }) => {
 				<NavLinkMobile to={"/project"} onClick={() => setIsOpen(false)}>
 					Project
 				</NavLinkMobile>
-				<NavLinkMobile to={"/Blog"} onClick={() => setIsOpen(false)}>
-					Blog
-				</NavLinkMobile>
 				<NavLinkMobile to={"/contact"} onClick={() => setIsOpen(false)}>
 					Contact
 				</NavLinkMobile>
@@ -31,7 +28,6 @@ export const NavlinkMd = ({ isOpen, setIsOpen }) => {
 		<MdMenu>
 			<NavLinkMd to={"/"}>Home</NavLinkMd>
 			<NavLinkMd to={"/project"}>Project</NavLinkMd>
-			<NavLinkMd to={"/blog"}>Blog</NavLinkMd>
 			<NavLinkMd to={"/contact"}>Contact</NavLinkMd>
 		</MdMenu>
 	);
