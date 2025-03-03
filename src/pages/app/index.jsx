@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import "./style.css";
+import Navbar from "../../components/navbar";
 
 const App = () => {
 	return (
-		<div className="container">
-			<h1>Hallo</h1>
-		</div>
+		<Fragment>
+			<Navbar />
+		</Fragment>
 	);
 };
 
