@@ -1,7 +1,7 @@
 {
   "name": "portfolio-dev",
   "version": "1.0.0",
-  "description": "Template Reactjs With Webpack",
+  "description": "My portfolio project",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development --open",
