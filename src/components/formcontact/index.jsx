@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Input, ButtonContact, TextArea } from "./styles";
+import emailjs from "@emailjs/browser";
 
 const FormContact = ({
 	form,
@@ -9,13 +10,40 @@ const FormContact = ({
 	setIsModal,
 }) => {
 	const handleChange = (e) => {
-		setForm({ ...form, [e.target.name]: e.target.value });
+		setForm({ ...form, empty: true, [e.target.name]: e.target.value });
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setIsModal(1);
-		setSubmitted(true);
+
+		emailjs
+			.send(
+				"service_56d3gn7",
+				"template_t89n8re",
+				{
+					to: "Frandi Pradana",
+					name: form.name,
+					email: form.email,
+					message: form.message,
+				},
+				"eZ09wMcRGO1V2esSV"
+			)
+			.then(
+				(response) => {
+					console.log("Email terkirim!", response.status, response.text);
+					setSubmitted(true);
+					setIsModal(1);
+					setForm({
+						name: "",
+						email: "",
+						message: "",
+						empty: true,
+					});
+				},
+				(err) => {
+					console.error("Gagal mengirim email:", err);
+				}
+			);
 	};
 
 	return (

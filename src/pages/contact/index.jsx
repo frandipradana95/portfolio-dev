@@ -4,21 +4,26 @@ import { Container, Section, Modal, ModalContainer } from "./styles";
 import { Icons } from "../../utils";
 
 const Contact = () => {
-	const [form, setForm] = useState({ name: "", email: "", message: "" });
+	const [form, setForm] = useState({
+		name: "",
+		email: "",
+		message: "",
+		empty: true,
+	});
 	const [submitted, setSubmitted] = useState(false);
 	const [isModal, setIsModal] = useState(0);
-
-	if (submitted) {
-		console.log(form);
-	}
 
 	return (
 		<Section id="contact">
 			<Modal scale={isModal}>
-				<ModalContainer>
+				<ModalContainer type={submitted ? 1 : 0}>
 					<div>
-						<h3>Terima kasih! </h3>
-						<p>Pesan Anda telah dikirim.</p>
+						<h3> {submitted ? "Terima kasih!" : "Maaf!"} </h3>
+						<p>
+							{submitted
+								? "Pesan Anda telah dikirim."
+								: "Pesan Anda gagal di kirim cobalah beberapa saat lagi."}
+						</p>
 					</div>
 
 					<button onClick={() => setIsModal(0)}>

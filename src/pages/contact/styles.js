@@ -39,7 +39,13 @@ export const Modal = styled.div`
 `;
 
 export const ModalContainer = styled.div`
-	background-color: ${Colors.success(0.6)};
+	background-color: ${(props) => {
+		// modal colors
+		if (props.type > 0) {
+			return Colors.success(0.6);
+		}
+		return Colors.danger(0.6);
+	}};
 	padding: 24px;
 	border-radius: 16px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

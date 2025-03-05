@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/frandipradana95/portfolio-dev#readme",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "styled-components": "^6.1.15"
