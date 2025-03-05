@@ -34,13 +34,3 @@ root.render(
 		<App />
 	</React.StrictMode>
 );
-
-// my js
-// clik semua halaman untuk hide navlink
-document.addEventListener("click", (e) => {
-	const btnMenu = document.querySelector("#btn-menu");
-	const navLink = document.querySelector("#nav-link");
-	if (!btnMenu.contains(e.target) && !navLink.contains(e.target)) {
-		navLink.classList.remove("open");
-	}
-});

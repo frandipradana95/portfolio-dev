@@ -42,7 +42,7 @@ export const NavLink = styled.div`
 
 	@media (max-width: 768px) {
 		position: absolute;
-		top: -400%;
+		top: ${(props) => (props.open > 0 ? "55px" : "-400%")};
 		right: 0;
 		width: 15rem;
 		background: rgba(255, 255, 255, 0.3); /* Warna transparan */
@@ -53,10 +53,6 @@ export const NavLink = styled.div`
 		gap: 15px;
 		display: flex;
 		transition: ease 0.3s;
-
-		&.open {
-			top: 55px;
-		}
 	}
 
 	& > a {
