@@ -1,13 +1,20 @@
 import React from "react";
 import { Form, Input, ButtonContact, TextArea } from "./styles";
 
-const FormContact = ({ form, setForm, submitted, setSubmitted }) => {
+const FormContact = ({
+	form,
+	setForm,
+	submitted,
+	setSubmitted,
+	setIsModal,
+}) => {
 	const handleChange = (e) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setIsModal(1);
 		setSubmitted(true);
 	};
 
