@@ -1,9 +1,16 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Icons } from "../../utils";
 import { Nav, Container, Logo, NavLink, ButtonMenu } from "./styles";
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener("resize", (e) =>
+			e.target.innerWidth >= 768 ? setMenuOpen(false) : setMenuOpen(menuOpen)
+		);
+	});
+
 	return (
 		<Fragment>
 			<Nav>
